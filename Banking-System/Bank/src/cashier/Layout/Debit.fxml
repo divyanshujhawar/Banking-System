@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashier.DebitController">
+   <children>
+      <Label layoutX="260.0" layoutY="14.0" text="Debit " />
+      <Label layoutX="84.0" layoutY="96.0" text="Amount" />
+      <TextField fx:id="amountField" layoutX="260.0" layoutY="91.0" promptText="Amount to be debitted" />
+      <TextField fx:id="accountField" layoutX="260.0" layoutY="54.0" promptText="Account Number" />
+      <Label layoutX="84.0" layoutY="139.0" text="Account Type" />
+      <RadioButton fx:id="currentButton" layoutX="260.0" layoutY="139.0" mnemonicParsing="false" text="Current">
+         <toggleGroup>
+            <ToggleGroup fx:id="acType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="savingButton" layoutX="382.0" layoutY="139.0" mnemonicParsing="false" text="Saving" toggleGroup="$acType" />
+      <Button layoutX="100.0" layoutY="183.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Label layoutX="84.0" layoutY="59.0" text="Account Number" />
+      <Button layoutX="398.0" layoutY="183.0" mnemonicParsing="false" onAction="#getSignature" text="Get Signature" />
+      <AnchorPane fx:id="debitPane" layoutX="111.0" layoutY="242.0" prefHeight="205.0" prefWidth="381.0">
+         <children>
+            <Button layoutX="163.0" layoutY="164.0" mnemonicParsing="false" onAction="#debit" text="Debit" />
+            <ImageView fx:id="sigImageView" fitHeight="150.0" fitWidth="258.0" layoutX="60.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

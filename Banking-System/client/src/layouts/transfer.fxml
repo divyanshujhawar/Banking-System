@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.Transfer">
+   <children>
+      <Label layoutX="136.0" layoutY="68.0" text="Account Number" />
+      <Label layoutX="136.0" layoutY="161.0" text="Amount" />
+      <Button layoutX="410.0" layoutY="274.0" mnemonicParsing="false" onAction="#send" text="Send" />
+      <TextField fx:id="account" layoutX="289.0" layoutY="63.0" />
+      <TextField fx:id="amount" layoutX="289.0" layoutY="156.0" />
+      <Button layoutX="158.0" layoutY="274.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <RadioButton fx:id="current" layoutX="289.0" layoutY="111.0" mnemonicParsing="false" text="Current">
+         <toggleGroup>
+            <ToggleGroup fx:id="acctype" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="saving" layoutX="382.0" layoutY="111.0" mnemonicParsing="false" text="Saving" toggleGroup="$acctype" />
+   </children>
+</AnchorPane>

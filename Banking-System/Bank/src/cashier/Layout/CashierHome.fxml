@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane id="BoaderPane" minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashier.CashierHomeController">
+   <top>
+      <MenuBar prefHeight="32.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout" />
+              <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#help" text="Ask me" />
+                  <MenuItem mnemonicParsing="false" onAction="#about" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane>
+         <children>
+            <HBox layoutY="11.0" spacing="20.0" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label text="CashierId::" />
+                        <Label fx:id="uidLabel" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label text="Cashier Name::" />
+                        <Label fx:id="unameLabel" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox layoutX="498.0" layoutY="11.0" spacing="20.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label text="Deposit:: ₹" />
+                        <Label fx:id="depositLabel" />
+                     </children>
+                  </HBox>
+                  <HBox spacing="5.0">
+                     <children>
+                        <Label text="Withdrawn:: ₹" />
+                        <Label fx:id="withdrawnLabel" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <SubScene fx:id="centerScene" height="500.0" width="600.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+   </center>
+   <left>
+      <Accordion prefWidth="200.0">
+        <panes>
+          <TitledPane alignment="TOP_LEFT" animated="false" prefWidth="200.0" text="Customer" underline="true">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#credit" prefHeight="25.0" prefWidth="200.0" text="Credit" />
+                        <Button layoutY="25.0" mnemonicParsing="false" onAction="#debit" prefHeight="25.0" prefWidth="200.0" text="Debit" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" prefWidth="200.0" text="Personal Info" underline="true">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#changePin" prefHeight="25.0" prefWidth="200.0" text="Change password" />
+                        <Button layoutY="25.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="25.0" prefWidth="200.0" text="Update Infoormation" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+</BorderPane>

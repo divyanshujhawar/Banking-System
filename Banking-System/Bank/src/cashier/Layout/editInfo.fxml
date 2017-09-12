@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cashier.EditInfoController">
+   <children>
+      <Button layoutX="407.0" layoutY="449.0" mnemonicParsing="false" onAction="#save" text="Save" />
+      <Button layoutX="94.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Label layoutX="205.0" layoutY="28.0" text="Update Personal Information" />
+      <Label layoutX="99.0" layoutY="85.0" text="Name" />
+      <Label fx:id="nameLabel" layoutX="248.0" layoutY="85.0" text="Label" />
+      <Label layoutX="99.0" layoutY="125.0" text="ID" />
+      <Label layoutX="99.0" layoutY="325.0" text="Joining Date" />
+      <Label fx:id="idLabel" layoutX="248.0" layoutY="125.0" text="Label" />
+      <Label fx:id="ageLabel" layoutX="248.0" layoutY="165.0" text="Label" />
+      <Label layoutX="99.0" layoutY="285.0" text="Designation" />
+      <Label layoutX="99.0" layoutY="205.0" text="Salary" />
+      <Label layoutX="99.0" layoutY="165.0" text="Age" />
+      <Label layoutX="99.0" layoutY="245.0" text="Address" />
+      <Label layoutX="99.0" layoutY="365.0" text="Mobile Number" />
+      <Label layoutX="99.0" layoutY="405.0" text="Email" />
+      <TextField fx:id="emailField" layoutX="248.0" layoutY="400.0" />
+      <TextField fx:id="numberField" layoutX="248.0" layoutY="360.0" />
+      <Label fx:id="salaryLabel" layoutX="248.0" layoutY="205.0" text="Label" />
+      <Label fx:id="addressLabel" layoutX="248.0" layoutY="245.0" text="Label" />
+      <Label fx:id="designationLabel" layoutX="248.0" layoutY="285.0" text="Label" />
+      <Label fx:id="joinDateLabel" layoutX="248.0" layoutY="325.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,1 @@
+# Banking-System - Software based application for bank workers and bank's customers. Bank Manager have the power to select and deselect new employees' and new managers' account.Manager can change the rate of interest. Customer can credit/debit and transfer his/her money to another account in the same bank. Customer can generate the log report of his/her trnsactions.
